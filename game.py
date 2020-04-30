@@ -1,7 +1,6 @@
 import pygame, sys
 from pygame.locals import *
 import random
-from pprint import pprint
 
 WIDTH=640
 HEIGHT=480
@@ -123,8 +122,7 @@ def main():
 	while True: # Main game loop
 		for event in pygame.event.get():
 			if event.type == QUIT or event.type == KEYUP:
-				pprint('Highest stability achieved:')
-				pprint(highestStability)
+				print("Highest stability achieved: {:.2f}%".format(highestStability))
 				pygame.quit()
 				sys.exit()
 		
